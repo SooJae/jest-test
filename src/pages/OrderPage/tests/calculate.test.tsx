@@ -86,7 +86,7 @@ describe("total price of goods and options", () => {
     userEvent.type(americaInput, "212");
 
     userEvent.clear(americaInput);
-    userEvent.type(americaInput, "62231");
+    userEvent.type(americaInput, "1");
 
     expect(total).toHaveTextContent("1500");
   });
