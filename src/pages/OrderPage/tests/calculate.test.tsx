@@ -83,7 +83,7 @@ describe("total price of goods and options", () => {
       name: "America",
     });
     userEvent.clear(americaInput);
-    userEvent.type(americaInput, "212");
+    userEvent.type(americaInput, "12");
 
     userEvent.clear(americaInput);
     userEvent.type(americaInput, "1");
