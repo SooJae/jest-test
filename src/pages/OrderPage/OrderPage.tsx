@@ -1,8 +1,11 @@
 import Type from "./Type";
-import { useContext } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { OrderContext } from "../../contexts/OrderContext";
 
-const OrderPage = () => {
+interface OrderPageProps {
+  setStep: Dispatch<SetStateAction<number>>;
+}
+const OrderPage = ({ setStep }: OrderPageProps) => {
   const [orderDatas] = useContext(OrderContext);
   return (
     <div>
@@ -18,8 +21,8 @@ const OrderPage = () => {
           {/*@ts-ignore*/}
           <h2>Total Price: {orderDatas.totals.total}</h2>
           <br />
-          <button>주문</button>
-          <Type orderType="options" />
+          <button onClick={() => setStep(1)}>주문하기</button>
+          {/*<Type orderType="options" />*/}
         </div>
       </div>
     </div>
