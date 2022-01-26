@@ -60,7 +60,7 @@ describe("total price of goods and options", () => {
 
   test("Updating total price when adding one option", async () => {
     render(<OrderPage />);
-    const total = screen.getByText("Total Price", { exact: false });
+    const total = screen.getByText("Total Price:", { exact: false });
 
     const insuranceCheckbox = await screen.findByRole("checkbox", {
       name: "Insurance",
