@@ -75,7 +75,7 @@ describe("total price of goods and options", () => {
     const total = screen.getByText("Total Price:", { exact: false });
 
     const 1insuranceCheckbox = await screen.findByRole("checkbox", {
-      name: "Insura1nce",
+      name: "Insurance1",
     });
     userEvent.click(insuranceCheckbox);
 
