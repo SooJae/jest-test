@@ -75,7 +75,7 @@ describe("total price of goods and options", () => {
     const total = screen.getByText("Total Price:", { exact: false });
 
     const insuranceCheckbox = await screen.findByRole("checkbox", {
-      name: "Insura1nce",
+      name: "Insurance",
     });
     userEvent.click(insuranceCheckbox);
 
@@ -83,10 +83,10 @@ describe("total price of goods and options", () => {
       name: "America",
     });
     userEvent.clear(americaInput);
-    userEvent.type(americaInput, "1232");
+    userEvent.type(americaInput, "3");
 
     userEvent.clear(americaInput);
-    userEvent.type(americaInput, "1234");
+    userEvent.type(americaInput, "1");
 
     expect(total).toHaveTextContent("1500");
   });
