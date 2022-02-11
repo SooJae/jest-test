@@ -19,7 +19,7 @@ test("checkbox and button222", () => {
   });
   expect(checkbox.checked).toEqual(false);
   const confirmButton: HTMLButtonElement = screen.getByRole("button", {
-    name: "주문 확인",
+    name: "주문 확인2",
   });
   expect(confirmButton.disabled).toBeTruthy();
 });
